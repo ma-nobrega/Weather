@@ -30,13 +30,13 @@
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.0.0",
     "react-native-web": "~0.13.12",
-    "styled-components": "^5.3.0"
-  },
+    "styled-components": "^5.1.1",
+    "@types/styled-components": "^5.1.2"
+    },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
-    "@types/styled-components": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
     "commitizen": "^4.2.3",

@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text } from 'react-native';
+import Menu from '../../components/Menu';
 import { Container } from './styles';
 
 const Home: React.FC = () => {
   return (
     <Container>
-      <Text>Home</Text>
+      <Menu>Menu</Menu>
     </Container>
   );
 };
