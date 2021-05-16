@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     <LinearGradient style={styles.header} colors={['#1ed6ff', '#97c1ff']}>
       <Date>20/05/2021</Date>
       <City>Monte Alto</City>
-      <FontAwesome5 name="cloud" size={160} color="#fff" />
+      <FontAwesome5 name="cloud" size={120} color="#fff" />
       <Temperature>28°</Temperature>
     </LinearGradient>
   );
@@ -18,9 +18,9 @@ const Header: React.FC = () => {
 const styles = StyleSheet.create({
   header: {
     width: '100%',
-    height: '60%',
+    height: '56%',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     borderRadius: 8,
   },
 });
