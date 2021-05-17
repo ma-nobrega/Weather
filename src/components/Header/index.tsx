@@ -1,16 +1,19 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import React from 'react';
+import React, { useContext } from 'react';
 import { StyleSheet } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { WeatherContext } from '../../contexts/WeatherContext';
 import { Date, City, Temperature } from './styles';
 
 const Header: React.FC = () => {
+  const { background, weather, icon } = useContext(WeatherContext);
+
   return (
-    <LinearGradient style={styles.header} colors={['#1ed6ff', '#97c1ff']}>
-      <Date>20/05/2021</Date>
-      <City>Monte Alto</City>
-      <FontAwesome5 name="cloud" size={120} color="#fff" />
-      <Temperature>28°</Temperature>
+    <LinearGradient style={styles.header} colors={background}>
+      <Date>{weather?.date}</Date>
+      <City>{weather?.city_name}</City>
+      <FontAwesome5 name={icon.name} size={120} color={icon.color} />
+      <Temperature>{weather?.temp}°</Temperature>
     </LinearGradient>
   );
 };

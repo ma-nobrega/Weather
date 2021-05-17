@@ -6,12 +6,12 @@ import { Container } from './styles';
 interface ItemProps {
   text: string;
   icon: string;
+  color: string;
 }
-
-const ConditionsItem: React.FC<ItemProps> = ({ text, icon }) => {
+const ConditionsItem: React.FC<ItemProps> = ({ text, icon, color }) => {
   return (
     <Container>
-      <MaterialCommunityIcons name={icon} size={24} color="#1ed6ff" />
+      <MaterialCommunityIcons name={icon} size={24} color={color} />
       <Text>{text}</Text>
     </Container>
   );

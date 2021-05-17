@@ -1,20 +1,12 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import React from 'react';
 import { Text } from 'react-native';
+import { ForecastProps } from '../../contexts/WeatherContext';
 import { IconConvert } from '../../utils/condition';
 
 import { Container, Date, Temp } from './styles';
 
-interface ForestProps {
-  data: {
-    date: string;
-    max: number;
-    min: number;
-    condition: string;
-  };
-}
-
-const Forecast: React.FC<ForestProps> = ({ data }) => {
+const Forecast: React.FC<ForecastProps> = ({ data }) => {
   const { name, color } = IconConvert(data.condition);
   return (
     <Container>
