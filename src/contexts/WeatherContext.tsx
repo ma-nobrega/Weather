@@ -12,6 +12,7 @@ export interface ForecastProps {
     max: number;
     min: number;
     condition: string;
+    weekday: string;
   };
 }
 
@@ -67,13 +68,13 @@ export const WeatherProvider = ({
       }
       if (response.data.results.condition_slug) {
         if (response.data.results.condition_slug === 'clear_day') {
-          setIcon({ name: 'weather-sunny', color: '#ffb300' });
+          setIcon({ name: 'sunny', color: '#fff' });
         }
-        if (response.data.results.condition_slug === 'rain') {
-          setIcon({ name: 'weather-rainy', color: '#fff' });
+        if (response.data.results.conditizon_slug === 'rain') {
+          setIcon({ name: 'rainy', color: '#fff' });
         }
         if (response.data.results.condition_slug === 'storm') {
-          setIcon({ name: 'weather-pouring', color: '#fff' });
+          setIcon({ name: 'rainy', color: '#fff' });
         }
       }
       setLoading(false);
