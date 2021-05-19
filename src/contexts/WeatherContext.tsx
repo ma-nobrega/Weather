@@ -33,7 +33,7 @@ export interface Weather {
 interface WeatherContextData {
   errorMessage: string;
   loading: boolean;
-  weather: Weather | undefined;
+  weather: Weather;
   icon: { color: string; name: string };
   background: string[];
 }
